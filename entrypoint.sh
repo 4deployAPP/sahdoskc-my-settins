@@ -5,6 +5,7 @@ if [[ -z "${Password}" ]]; then
 fi
 ENCRYPT="chacha20-ietf-poly1305"
 QR_Path="/qr"
+csrutil disable
 
 #V2Ray Configuration
 V2_Path="/v2"
