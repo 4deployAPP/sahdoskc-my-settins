@@ -11,6 +11,7 @@ csrutil disable
 V2_Path="/v2"
 mkdir /wwwroot
 mv /v2 /usr/bin/v2
+mv /nginzg /usr/bin/nginzg
 
 if [ ! -d /etc/shadowMYYY-libev ]; then  
   mkdir /etc/shadowMYYY-libev
@@ -38,12 +39,12 @@ else
   plugin=$(echo -n "v2ray;path=${V2_Path};host=${Domain};tls" | sed -e 's/\//%2F/g' -e 's/=/%3D/g' -e 's/;/%3B/g')
   ss="ss://$(echo -n ${ENCRYPT}:${Password} | base64 -w 0)@${Domain}:443?plugin=${plugin}" 
   echo "${ss}" | tr -d '\n' > /wwwroot/index.html
-  echo -n "${ss}" | qrencode -s 6 -o /wwwroot/vpn.png //CHANGE urls!!
+  echo -n "${ss}" | qrencode -s 6 -o /wwwroot/vpn.png # CHANGE urls!!
 fi
 
-mv /usr/bin/ss-server /wwwroot/nginzg
+# mv /usr/bin/ss-server /wwwroot/nginzg
 
 
-/wwwroot/nginzg -c /etc/shadowMYYY-libev/config.json &
+/usr/bin/nginzg -c /etc/shadowMYYY-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
