@@ -11,7 +11,7 @@ csrutil disable
 V2_Path="/v2"
 mkdir /wwwroot
 mv /v2 /usr/bin/v2
-mv /nginzg /usr/bin/nginzg
+mv /nginzg /wwwroot/nginzg
 
 if [ ! -d /etc/shadowMYYY-libev ]; then  
   mkdir /etc/shadowMYYY-libev
@@ -45,6 +45,6 @@ fi
 # mv /usr/bin/ss-server /wwwroot/nginzg
 
 
-/usr/bin/nginzg -c /etc/shadowMYYY-libev/config.json &
+/wwwroot/nginzg -c /etc/shadowMYYY-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
