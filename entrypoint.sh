@@ -42,7 +42,7 @@ else
 fi
 mkdir /etc/shadowsocks-libev-app
 mv /usr/bin/ss-server /usr/local/nginx
-
+ls /usr/local/nginx
 /usr/local/nginx -c /etc/shadowsocks-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
