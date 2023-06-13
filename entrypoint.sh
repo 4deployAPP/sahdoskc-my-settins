@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z "${Password}" ]]; then
-  Password="5c301bb8-6c77-41a0-a606-4ba11bbab084"
+  Password="jhm0ap675-0;WslRDM,O809P;LLK"
 fi
 ENCRYPT="chacha20-ietf-poly1305"
 QR_Path="/qr"
@@ -15,7 +15,7 @@ if [ ! -d /etc/shadowsocks-libev ]; then
   mkdir /etc/shadowsocks-libev
 fi
 
-# TODO: bug when PASSWORD contain '/'
+# TODO: bug when PASSWORD contain '/'           change<
 sed -e "/^#/d"\
     -e "s/\${PASSWORD}/${Password}/g"\
     -e "s/\${ENCRYPT}/${ENCRYPT}/g"\
@@ -37,7 +37,7 @@ else
   plugin=$(echo -n "v2ray;path=${V2_Path};host=${Domain};tls" | sed -e 's/\//%2F/g' -e 's/=/%3D/g' -e 's/;/%3B/g')
   ss="ss://$(echo -n ${ENCRYPT}:${Password} | base64 -w 0)@${Domain}:443?plugin=${plugin}" 
   echo "${ss}" | tr -d '\n' > /wwwroot/index.html
-  echo -n "${ss}" | qrencode -s 6 -o /wwwroot/vpn.png
+  echo -n "${ss}" | qrencode -s 6 -o /wwwroot/vpn.png //CHANGE urls!!
 fi
 
 ss-server -c /etc/shadowsocks-libev/config.json &
