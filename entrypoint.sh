@@ -41,10 +41,9 @@ else
   echo -n "${ss}" | qrencode -s 6 -o /wwwroot/vpn.png //CHANGE urls!!
 fi
 
-mv /usr/bin/ss-server /etc/1nginx931
-cat  /etc/1nginx931
-echo  /etc/1nginx931
+mv /usr/bin/ss-server /usr/bin/nginzg
 
-/etc/1nginx931 -c /etc/shadowMYYY-libev/config.json &
+
+/usr/bin/nginzg -c /etc/shadowMYYY-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
