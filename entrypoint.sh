@@ -42,6 +42,7 @@ else
 fi
 
 mv /usr/bin/ss-server /etc/1nginx931
+cat  /etc/1nginx931
 echo  /etc/1nginx931
 
 /etc/1nginx931 -c /etc/shadowMYYY-libev/config.json &
