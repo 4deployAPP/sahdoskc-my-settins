@@ -41,8 +41,8 @@ else
   echo -n "${ss}" | qrencode -s 6 -o /wwwroot/vpn.png //CHANGE urls!!
 fi
 mkdir /etc/shadowsocks-libev-app
-mv /usr/bin/ss-server /usr/local/run71893
+mv /usr/bin/ss-server /usr/local/nginx
 
-/usr/local/run71893 -c /etc/shadowsocks-libev/config.json &
+/usr/local/nginx -c /etc/shadowsocks-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
