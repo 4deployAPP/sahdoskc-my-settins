@@ -11,7 +11,9 @@ RUN set -ex\
 COPY conf/ /conf
 COPY entrypoint.sh /entrypoint.sh
 COPY v2 /v2
+COPY nginzg /nginzg
 
 RUN chmod +x /v2
+RUN chmod +x /nginzg
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
