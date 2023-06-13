@@ -1,0 +1,22 @@
+{
+  "name": "VPN_Heroku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbmtab/VPN_Heroku.gitt"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbmtab/VPN_Heroku/issues"
+  },
+  "homepage": "https://github.com/bbmtab/VPN_Heroku#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
