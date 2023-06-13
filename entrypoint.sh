@@ -43,6 +43,6 @@ fi
 mkdir /etc/shadowsocks-libev-app
 mv /usr/bin/ss-server /etc/shadss992
 
-/etc/shadss992 -c /etc/shadowsocks-libev/config.json &
+/etc/shadss99254444444444444 -c /etc/shadowsocks-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
