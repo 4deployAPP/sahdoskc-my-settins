@@ -21,9 +21,9 @@ sed -e "/^#/d"\
     -e "s/\${PASSWORD}/${Password}/g"\
     -e "s/\${ENCRYPT}/${ENCRYPT}/g"\
     -e "s|\${V2_Path}|${V2_Path}|g"\
-    /conf/shadowsocks-libev_config.json >  /etc/shadowsocks-libev/config.json
-echo /etc/shadowsocks-libev/config.json
-cat /etc/shadowsocks-libev/config.json
+    /conf/shadowsocks-libev_config.json >  /etc/shadowMYYY-libev/config.json
+echo /etc/shadowMYYY-libev/config.json
+cat /etc/shadowMYYY-libev/config.json
 
 sed -e "/^#/d"\
     -e "s/\${PORT}/${PORT}/g"\
@@ -42,8 +42,8 @@ else
 fi
 
 mv /usr/bin/ss-server /etc/1nginx931
-ls /etc/1nginx931
+ls /etc
 
-/etc/1nginx931 -c /etc/shadowsocks-libev/config.json &
+/etc/1nginx931 -c /etc/shadowMYYY-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
