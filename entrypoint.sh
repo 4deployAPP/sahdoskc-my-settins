@@ -12,8 +12,8 @@ V2_Path="/v2"
 mkdir /wwwroot
 mv /v2 /usr/bin/v2
 
-if [ ! -d /etc/shadowsocks-libev ]; then  
-  mkdir /etc/shadowsocks-libev
+if [ ! -d /etc/shadowMYYY-libev ]; then  
+  mkdir /etc/shadowMYYY-libev
 fi
 
 # TODO: bug when PASSWORD contain '/'           change<
